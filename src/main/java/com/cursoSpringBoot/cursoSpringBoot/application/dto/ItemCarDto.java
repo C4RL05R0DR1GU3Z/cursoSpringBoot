@@ -3,7 +3,6 @@ package com.cursoSpringBoot.cursoSpringBoot.application.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NonNull;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -13,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @AllArgsConstructor
 public class ItemCarDto {
-    @NotBlank
+    @NotBlank(message = "Valor requerido")
     @NotEmpty(message = "Longitud de la cadena mayor a 0")
     @NotNull(message = "Valor requerido")
     private String name;
